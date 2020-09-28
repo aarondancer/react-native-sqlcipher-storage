@@ -8,8 +8,7 @@ Pod::Spec.new do |s|
   s.summary  = package['description']
   s.homepage = "https://github.com/andpor/react-native-sqlite-storage"
   s.license  = package['license']
-  s.authors = "Something"
-  s.author   = package['author']
+  s.authors   = { 'Tony Million' => 'tonymillion@gmail.com' }
   s.source   = { :git => "https://github.com/aarondancer/react-native-sqlcipher-storage.git", :branch => "master" }
 
   s.ios.deployment_target = '8.0'
