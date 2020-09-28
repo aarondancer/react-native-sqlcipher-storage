@@ -17,6 +17,11 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'README.md', 'LICENSE', 'package.json', 'sqlite.js'
   s.source_files   = "src/ios/*.{h,m}"
 
+  s.frameworks    = ['Security']
   s.dependency 'React'
   s.dependency 'SQLCipher'
+
+  s.xcconfig      = {
+    'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC -DSQLCIPHER_CRYPTO_CC'
+  }
 end
